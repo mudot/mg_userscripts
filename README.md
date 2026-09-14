@@ -1,92 +1,85 @@
-# MonstersGame Userscripts
+# MonstersGame Userscripts ⚔️
 
-Userscripts desenvolvidos para melhorar a experiência de jogo no **MonstersGame**, adicionando ferramentas, informações e melhorias de interface que não estão disponíveis originalmente no jogo.
+Conjunto de scripts modulares desenvolvidos para aprimorar a experiência, a interface e o gerenciamento de recursos no jogo de navegador **MonstersGame**, com ênfase especial na usabilidade em dispositivos móveis.
 
-O projeto tem como foco principal:
-
-- Melhorar a experiência em dispositivos móveis;
-- Otimizar a visualização das informações;
-- Adicionar ferramentas auxiliares para gerenciamento do jogo;
-- Criar recursos de acompanhamento de progresso;
-- Tornar determinadas funções mais práticas e acessíveis.
-
-> ⚠️ **Aviso:** estes scripts são projetos independentes da comunidade e não possuem vínculo oficial com o MonstersGame ou com seus desenvolvedores.
+> [!WARNING]
+> **Aviso Legal:** Este é um projeto independente criado pela comunidade. Não possui qualquer vínculo oficial, suporte ou afiliação com os desenvolvedores ou administradores do MonstersGame. O uso é de responsabilidade de cada jogador.
 
 ---
 
-## 📱 MonstersGame Mobile
+## 📦 Scripts Disponíveis
 
-Userscript focado em adaptar a interface do MonstersGame para dispositivos móveis.
-
-O objetivo é tornar as páginas do jogo mais fáceis de utilizar em smartphones e telas menores, reduzindo elementos que ultrapassam a tela e reorganizando componentes da interface.
-
-### Principais funcionalidades
-
-- Interface adaptada para smartphones;
-- Layout responsivo;
-- Melhor aproveitamento da largura da tela;
-- Ajustes em menus e elementos da interface;
-- Redimensionamento de componentes;
-- Melhor organização das informações;
-- Correções visuais em elementos que ficam sobrepostos;
-- Ajustes na página de talentos;
-- Organização dos conjuntos de talentos;
-- Ícones dos talentos dimensionados para permanecer dentro dos respectivos slots;
-- Melhor adaptação da Statbar;
-- Reorganização do botão **Memo** na Statbar.
-
-### 📱 Compatibilidade
-
-O layout utiliza regras responsivas para adaptar a interface de acordo com a resolução disponível.
-
-O objetivo é oferecer uma experiência consistente em:
-
-- Smartphones;
-- Tablets;
-- Monitores pequenos;
-- Monitores convencionais.
+| Script | Descrição |
+| :--- | :--- |
+| `MonstersGame-Mobile.user.js` | Interface responsiva, correções de sobreposição e otimização para toque. |
+| `MonstersGame-Highscore-Comparator.user.js` | Histórico e comparação automática de evolução no ranking. |
+| `MonstersGame-Attack-Timer.user.js` | Contador regressivo flutuante para cooldown de ataques com alertas. |
 
 ---
 
-# 📊 Comparador de Highscore
+## 🛠️ Detalhes das Ferramentas
 
-Userscript criado para acompanhar mudanças no ranking do MonstersGame.
+### 📱 1. MonstersGame Mobile
+Reformula o layout do jogo para garantir acessibilidade fluida em smartphones, tablets e resoluções reduzidas.
+* **Layout Responsivo:** Elimina barras de rolagem horizontais e quebras visuais.
+* **Correções Visuais:** Componentes readequados, fontes proporcionais e ajustes em textos sobrepostos.
+* **Otimização de Telas Críticas:** 
+  * Talentos ajustados rigidamente aos seus respectivos slots e conjuntos organizados.
+  * *Statbar* reconstruída com melhor posicionamento para o botão **Memo**.
 
-O script registra snapshots do Highscore e compara os dados atuais com registros anteriores, permitindo visualizar a evolução dos jogadores.
+---
 
-## Informações acompanhadas
+### 📊 2. Comparador de Highscore
+Monitora as oscilações de classificação e recursos dos jogadores a partir de capturas de estado (*snapshots*).
+* **Métricas Comparadas:** Variação de ranking, ouro, pedras preciosas, vitórias, derrotas e ancestrais.
+* **Layout Adaptável:** Em telas menores, tabelas largas são convertidas em *cards* individuais táteis.
+* **Deltas Visuais:** Demonstração prática do progresso:
+  ```text
+  Posição:    10º → 7º (+3)
+  Vitórias:   +15
+  Ouro:       +12.500
+  Preciosidades: +4
+  ```
 
-Para cada jogador, o comparador pode apresentar:
+---
 
-- 🏆 Posição no Highscore;
-- 📈 Mudança de posição;
-- 💎 Preciosidades;
-- 🪙 Ouro;
-- ⚔️ Vitórias;
-- ☠️ Derrotas;
-- 🩸 Ancestrais.
+### ⏱️ 3. Timer de Cooldown de Ataque
+Cronômetro em tempo real para gerenciar o intervalo entre batalhas sem necessidade de recálculo manual.
+* **Controle:** Detecção automática do ataque ou acionamento manual.
+* **Alertas:** Notificações de navegador e alertas sonoros configuráveis ao término do tempo.
+* **Interface Flutuante (HUD):**
+  * Arrastável (*drag-and-drop*) com suporte a mouse e toque (Pointer Events).
+  * Memória de posicionamento via `localStorage`.
+  * Redimensionamento automático baseado na resolução da tela.
 
-### Comparação automática
+---
 
-O script identifica alterações entre diferentes snapshots.
+## 🚀 Instalação
 
-Exemplos:
+1. Instale uma extensão gerenciadora de userscripts em seu navegador:
+   * [Tampermonkey](https://www.tampermonkey.net/) (Recomendado) ou [Violentmonkey](https://violentmonkey.github.io/).
+2. Clique no script desejado na pasta do repositório (ou copie seu código-fonte).
+3. Crie um novo script no gerenciador e cole o código.
+4. Salve e recarregue a página do MonstersGame.
 
-```text
-Posição
-10º → 7º
+---
 
-Vitórias
-+15
+## 🔒 Privacidade e Arquitetura
 
-Derrotas
-+3
+* **100% Client-Side:** Os scripts rodam exclusivamente no navegador do usuário via JavaScript nativo.
+* **Armazenamento Local:** Dados como histórico de ranking, timers e posições de HUD são gravados apenas no `localStorage` do dispositivo. Nenhuma informação é enviada a servidores externos.
+* **Tecnologias Utilizadas:** Vanilla JS, CSS3 Flexbox/Grid, DOM MutationObserver, Web Audio API e Web Notifications API.
 
-Ancestrais
-+2
+---
 
-Ouro
-+12.500
+## 🤝 Contribuições
 
-Preciosidades
-+4
+Contribuições, correções e sugestões são bem-vindas!
+* Para reportar bugs, abra uma **[Issue](../../issues)** informando seu dispositivo, navegador, resolução e, se possível, prints da tela/console.
+* Pull Requests estruturados serão analisados e aceitos.
+
+---
+
+## 📜 Licença
+
+Este projeto é distribuído sob a licença [MIT](LICENSE) 
