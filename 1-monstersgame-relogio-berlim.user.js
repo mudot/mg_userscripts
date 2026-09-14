@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      1.1
 // @description  Adiciona um relógio com o horário de Berlim dentro da toolbar moonID
-// @author       Você
+// @author       Ricardo
 // @match        *://*.moonid.net/*
 // @match        *://moonid.net/*
 // @match        https://moonid.net/toolbar/v2/frame*
