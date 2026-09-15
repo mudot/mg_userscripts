@@ -12,7 +12,6 @@ Conjunto de scripts modulares desenvolvidos para aprimorar a experiência, a int
 | Script | Descrição |
 | :--- | :--- |
 | `MonstersGame-Mobile.user.js` | Interface responsiva, correções de sobreposição e otimização para dispositivos móveis.
-| `MonstersGame-Attack-Timer.user.js` | Contador regressivo flutuante para cooldown de ataques com alertas. |
 
 ---
 
@@ -25,17 +24,6 @@ Reformula o layout do jogo para garantir acessibilidade fluida em smartphones, t
 * **Otimização de Telas Críticas:** 
   * Talentos ajustados rigidamente aos seus respectivos slots e conjuntos organizados.
   * *Statbar* reconstruída com melhor posicionamento para o botão **Memo**.
-
----
-
-### ⏱️ 3. Timer de Cooldown de Ataque
-Cronômetro em tempo real para gerenciar o intervalo entre batalhas sem necessidade de recálculo manual.
-* **Controle:** Detecção automática do ataque ou acionamento manual.
-* **Alertas:** Notificações de navegador e alertas sonoros configuráveis ao término do tempo.
-* **Interface Flutuante (HUD):**
-  * Arrastável (*drag-and-drop*) com suporte a mouse e toque (Pointer Events).
-  * Memória de posicionamento via `localStorage`.
-  * Redimensionamento automático baseado na resolução da tela.
 
 ---
 
