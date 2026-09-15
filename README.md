@@ -11,8 +11,7 @@ Conjunto de scripts modulares desenvolvidos para aprimorar a experiência, a int
 
 | Script | Descrição |
 | :--- | :--- |
-| `MonstersGame-Mobile.user.js` | Interface responsiva, correções de sobreposição e otimização para toque. |
-| `MonstersGame-Highscore-Comparator.user.js` | Histórico e comparação automática de evolução no ranking. |
+| `MonstersGame-Mobile.user.js` | Interface responsiva, correções de sobreposição e otimização para dispositivos móveis.
 | `MonstersGame-Attack-Timer.user.js` | Contador regressivo flutuante para cooldown de ataques com alertas. |
 
 ---
@@ -26,20 +25,6 @@ Reformula o layout do jogo para garantir acessibilidade fluida em smartphones, t
 * **Otimização de Telas Críticas:** 
   * Talentos ajustados rigidamente aos seus respectivos slots e conjuntos organizados.
   * *Statbar* reconstruída com melhor posicionamento para o botão **Memo**.
-
----
-
-### 📊 2. Comparador de Highscore
-Monitora as oscilações de classificação e recursos dos jogadores a partir de capturas de estado (*snapshots*).
-* **Métricas Comparadas:** Variação de ranking, ouro, pedras preciosas, vitórias, derrotas e ancestrais.
-* **Layout Adaptável:** Em telas menores, tabelas largas são convertidas em *cards* individuais táteis.
-* **Deltas Visuais:** Demonstração prática do progresso:
-  ```text
-  Posição:    10º → 7º (+3)
-  Vitórias:   +15
-  Ouro:       +12.500
-  Preciosidades: +4
-  ```
 
 ---
 
