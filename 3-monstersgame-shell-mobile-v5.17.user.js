@@ -2159,7 +2159,7 @@
             const memoBtn = document.createElement('div');
             memoBtn.className = 'statbarEntry';
             memoBtn.style.cssText = 'cursor:pointer; flex-shrink:0;';
-            memoBtn.innerHTML = '📋 Memo';
+            memoBtn.innerHTML = 'Memo';
             const firstEntry = statbar.querySelector('.statbarEntry');
             if (firstEntry) statbar.insertBefore(memoBtn, firstEntry);
             else statbar.insertBefore(memoBtn, statbar.firstChild);
