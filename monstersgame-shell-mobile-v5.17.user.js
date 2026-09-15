@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      5.17
 // @description  Interface mobile para MonstersGame (v5.17)
-// @author       Você
+// @author       Mudot
 // @match        *://*.monstersgame.moonid.net/*
 // @grant        none
 // @run-at       document-end
